@@ -132,6 +132,3 @@ jobs:
           bash $(pwd)/xedbot.sh "$ZIP" "`cat buildDetails.txt`"
           fi
         working-directory: kernel_root
-
-      
-Update xedbot.sh · maazm7d/builder@70f5967
