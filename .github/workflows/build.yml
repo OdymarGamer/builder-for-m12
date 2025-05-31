@@ -50,7 +50,7 @@ jobs:
           sudo ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
       - name: Clone KernelSU-Next
         run: |
-          curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-dev
+          curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s nongki
         working-directory: kernel_root
 
       - name: Build kernel
