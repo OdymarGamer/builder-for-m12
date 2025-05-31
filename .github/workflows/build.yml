@@ -52,7 +52,7 @@ jobs:
 
       - name: Clone KernelSU-Next
         run: |
-          curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
+          curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-dev
         working-directory: kernel_root
 
       - name: Build kernel
