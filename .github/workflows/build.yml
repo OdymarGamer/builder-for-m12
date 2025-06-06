@@ -20,9 +20,11 @@ on:
         required: true
         default: 'sukiSUUltra+susfs+kpmfor m12'
       UPLOAD_TO_TG:
+        default: true
         description: Upload to Telegram
         type: boolean
       UPLOAD_TO_GH:
+        default: true
         description: Upload to GitHub Release
         type: boolean
       
