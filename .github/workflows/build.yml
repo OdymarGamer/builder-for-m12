@@ -10,11 +10,11 @@ on:
       ROOT_IMPL:
        description: Select KSU
        required: true
-       default: 'kernelsu-next'
+       default: 'sukiSuUltra'
        type: choice
        options:
          - kernelsu-next
-         - sukisu
+         - sukiSuUltra
       AK3_NAME:
         description: Enter custom name for AnyKernel3 artifact
         required: true
@@ -67,7 +67,7 @@ jobs:
           kernelsu-next)
           curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs
           ;;
-          sukisu)
+          sukiSuUltra)
           curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-dev
           ;;
           esac
@@ -148,7 +148,7 @@ jobs:
           if [ ! -z "${{ secrets.BOT_TOKEN }}" ]; then   
           ZIP="./anykernel3/AnyKernel3-${{ github.event.inputs.AK3_NAME }}.zip"
           cat buildDetails.txt
-          git clone https://github.com/maazm7d/builder.git --depth=1 i && cp ./i/xedbot.sh . && rm -rf i
+          git clone https://github.com/OdymarGamer/builder-for-m12.git --depth=1 i && cp ./i/xedbot.sh . && rm -rf i
           bash $(pwd)/xedbot.sh "$ZIP" "`cat buildDetails.txt`"
           fi
         working-directory: kernel_root
@@ -187,7 +187,7 @@ jobs:
           name: "${{ steps.tag.outputs.tag_name }}"
           body: ${{ steps.changelog.outputs.changelog }}
           files: kernel_root/anykernel3/AnyKernel3-${{ github.event.inputs.AK3_NAME }}.zip
-          repository: maazm7d/kernel_samsung_m12
+          repository: OdymarGamer/kernel_samsung_m12
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         
