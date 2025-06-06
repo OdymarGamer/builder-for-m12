@@ -187,7 +187,7 @@ jobs:
           name: "${{ steps.tag.outputs.tag_name }}"
           body: ${{ steps.changelog.outputs.changelog }}
           files: kernel_root/anykernel3/AnyKernel3-${{ github.event.inputs.AK3_NAME }}.zip
-          repository: OdymarGamer/kernel_samsung_m12
+          repository: OdymarGamer/builder-for-m12
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         
